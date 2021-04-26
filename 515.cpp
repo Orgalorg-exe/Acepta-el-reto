@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int n
+int n;
 
 int sol(int n);
 
