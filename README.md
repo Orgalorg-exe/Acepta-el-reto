@@ -264,10 +264,10 @@ int sol(int n){
   * [ ] Implementación de la solución
   * [ ] Detalles de la solución
 * [ ] 515. Poniendo la mesa
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
+  * [X] Encabezado
+  * [X] Datos previos
+  * [X] Main
+  * [X] Implementación de la solución
   * [ ] Detalles de la solución
 * [ ] 528. El extraño caso de la multiplicación
   * [ ] Encabezado
