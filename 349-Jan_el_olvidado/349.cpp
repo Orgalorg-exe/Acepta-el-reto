@@ -15,44 +15,6 @@ int main() {
 
 	return 0;
 }
-/* mi solución
-int calculadoraPolaca(char op) {
-
-	char op1, op2;
-	int num1, num2;
-
-	cin >> op1;
-	if (isdigit(op1)) {
-
-		num1 = op1 - '0';
-
-		cin >> op2;
-		if (isdigit(op2))
-			num2 = op2 - '0';
-		else
-			num2 = calculadoraPolaca(op2);
-	}
-	else {
-
-		num1 = calculadoraPolaca(op1);
-
-		cin >> op2;
-		if (isdigit(op2))
-			num2 = op2 - '0';
-		else
-			num2 = calculadoraPolaca(op2);
-	}
-
-
-	if (op == '+')
-		return num1 + num2;
-	else if (op == '*')
-		return num1 * num2;
-	else if (op == '-')
-		return num1 - num2;
-	else if (op == '/')
-		return num1 / num2;
-}*/
 
 int calculadoraPolaca() {
 
