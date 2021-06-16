@@ -7,9 +7,6 @@ Es posible que no siempre sean las más optimas o las más elegantes pero son mi
 ## 1. Estructura de las soluciones
 
 ```c++
-/* ENCABEZADO
-  Descripción del problema
-*/
 
 //DATOS PREVIOS
 
