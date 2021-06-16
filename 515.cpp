@@ -1,7 +1,3 @@
-/*  ENCABEZADO
-	Problema lógico
-*/
-
 //  DATOS PREVIOS
 #include <iostream>
 

@@ -1,34 +1,57 @@
+//DATOS PREVIOS
+
+//includes
 #include<iostream>
+#include <string>
 
 using namespace std;
 
+//Declaración de la función
+int numElefantes(int max);
+
+//MAIN
 int main() {
 
-	long long int pesoTela, pesoElefante, pesoElefanteAcumulado, numElefantes;
+	long long int max;
+	string aux;
 
-	cin >> pesoTela; 
+	cin >> max;
 
-	while (pesoTela != 0) {
-
-		pesoElefanteAcumulado = 0;
-		numElefantes = 0;
-
-		//Mejorable leyendo la entrada de pesos de elefantes como un string, detener el procesamiento del string cuando pEA > pT
-		cin >> pesoElefante;
-		pesoElefanteAcumulado += pesoElefante;
-		while (pesoElefante != 0) {
-
-			if (pesoElefanteAcumulado <= pesoTela) {
-				numElefantes++;
-			}
-
-			cin >> pesoElefante;
-			pesoElefanteAcumulado += pesoElefante;
-		}
-
-		cout << numElefantes << endl;
-		cin >> pesoTela;
+	while (max != 0) {
+		cout << numElefantes(max) << endl;
+		getline(cin, aux);
+		cin >> max;
 	}
 
 	return 0;
 }
+
+
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//DETALLES DE LA SOLUCIÓN
+
+//pre
+int numElefantes(int max) {
+
+	long long int pesoAcum = 0, input;
+	long long int ret = 0;
+	//Invariante
+	
+	cin >> input;
+	pesoAcum += input;
+
+	// O(n)
+	// n = max, como mucho,
+	// acumularemos max elefantes
+	// de peso = 1
+	while (pesoAcum <= max && input != 0) {
+		++ret;
+		cin >> input;
+		pesoAcum += input;
+	}
+
+	return ret;
+}
+//post
+
+

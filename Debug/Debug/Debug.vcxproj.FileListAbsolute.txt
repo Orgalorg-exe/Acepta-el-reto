@@ -1,2 +1,3 @@
 C:\Users\scc_1\Desktop\Acepta el reto\Debug\Debug\Debug.exe
 C:\Users\scc_1\Desktop\Acepta el reto\Debug\Debug\Debug.pdb
+C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\Debug\Debug\Debug.exe

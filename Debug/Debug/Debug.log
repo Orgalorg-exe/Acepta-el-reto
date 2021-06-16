@@ -1,2 +1,4 @@
-﻿  100.cpp
-  Debug.vcxproj -> C:\Users\scc_1\Desktop\Acepta el reto\Debug\Debug\Debug.exe
+﻿  411.cpp
+C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\411.cpp(21,24): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\411.cpp(49,9): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+  Debug.vcxproj -> C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\Debug\Debug\Debug.exe

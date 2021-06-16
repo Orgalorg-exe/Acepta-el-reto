@@ -48,292 +48,246 @@ int sol(int n){
 ## 2. Estado de la lista de soluciones
 
 * [ ] 100. Constante de Kaprekar
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 104. Móviles
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 114. Último dígito factorial
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 136. Encadenado trolls
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 140. Suma de dígitos
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 152. Va de modas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 167. Pintando fractales
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 171. Abadías pirenaicas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 219. La lotería de la peñ
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solucióna Atlética
-* [ ] 220. ¡Pasa la calculadora
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución!
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
+* [ ] 220. ¡Pasa la calculadora!
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 222. Serie de potencias
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 224. Los bocadillos de la
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la soluciónhormiga reina
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 229. Cuentas paralelas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 230. Desórdenes temporales
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 237. Números polidivisibles
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
   * [ ] Detalles de la solución
 * [ ] 242. Erasmús
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 266. Copistas daltónicos
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 272. Tres dedos en cada mano
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la soluciónano
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 295. Elévame
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 306. Dos igualdades sorprendentes
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 314. Temperaturas extremas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 342. ¡No lo puedes saber!
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 346. El hombre con seis dedos
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 347. Haciendo pajaritas de papel
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 349. Jan el olvidado
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 357. La prueba de las cajas y las bolas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 384. El juego de la linterna
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
   * [ ] Detalles de la solución
 * [ ] 396. Las partituras de la orquesta
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 406. Yonge Street
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 410. Dígitos saltarines
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 411. Sobre la tela de una araña
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [X] Complejidad
+  * [ ] Post
 * [ ] 412. Ovejas negras
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 420. El secreto de la bolsa
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 460. Base de raíz de 10
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 472. Caminando voy
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 506. Tensión descompensada
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 515. Poniendo la mesa
-  * [X] Encabezado
-  * [X] Datos previos
-  * [X] Main
-  * [X] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 528. El extraño caso de la multiplicación
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 570. DNI incompleto
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 583. Encuesta comprometedora
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 584. Duración de las bombillas LED
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 585. El reto del reloj programable
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 586. Colección de calendarios de bolsillo
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 587. Gorros de colores
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 588. Velas binarias
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 589. Igualando copas
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 590. A caballo por el viñedo
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 * [ ] 591. Dendrocronología
-  * [ ] Encabezado
-  * [ ] Datos previos
-  * [ ] Main
-  * [ ] Implementación de la solución
-  * [ ] Detalles de la solución
+  * [ ] Pre
+  * [ ] Invariante
+  * [ ] Complejidad
+  * [ ] Post
 
 :penguin:
