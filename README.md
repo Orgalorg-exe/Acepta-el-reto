@@ -224,7 +224,7 @@ int sol(int n){
 * [ ] 506. Tensión descompensada
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 515. Poniendo la mesa
   * [ ] Pre

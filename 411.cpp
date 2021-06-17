@@ -41,7 +41,7 @@ int numElefantes(int max) {
 	pesoAcum += input;
 
 	// O(n)
-	// n = max, como mucho,
+	// n = max, en el peor caso
 	// acumularemos max elefantes
 	// de peso = 1
 	while (pesoAcum <= max && input != 0) {
