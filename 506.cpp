@@ -1,4 +1,6 @@
 //DATOS PREVIOS
+//17/6/2021:Funciona bien pero 
+//	no compila en AeR 
 
 //includes
 #include<iostream>

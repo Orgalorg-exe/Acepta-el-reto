@@ -214,7 +214,7 @@ int sol(int n){
 * [ ] 460. Base de raíz de 10
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 472. Caminando voy
   * [ ] Pre
