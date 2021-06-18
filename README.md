@@ -57,7 +57,7 @@ int sol(int n){
 * [ ] 114. Último dígito factorial
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 136. Encadenado trolls
   * [ ] Pre
