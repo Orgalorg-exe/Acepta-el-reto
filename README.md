@@ -82,8 +82,8 @@ int sol(int n){
 * [ ] 171. Abadías pirenaicas
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 219. La lotería de la peñ
   * [ ] Pre
   * [ ] Invariante
