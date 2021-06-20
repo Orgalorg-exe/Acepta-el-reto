@@ -123,7 +123,7 @@ int sol(int n){
 * [ ] 242. Erasmús
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 266. Copistas daltónicos
   * [ ] Pre
