@@ -14,11 +14,10 @@ Es posible que no siempre sean las más optimas o las más elegantes pero son mi
 #include<iostream>
 using namespace std;
 
-//constantes y variables
+//constantes
 const int MAX = 50;
-int n;
 
-//Declaración de la función
+//Declaración de funciones
 int sol(int n);
 
 //MAIN
@@ -32,7 +31,7 @@ int main(){
 }
 
 //IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//DETALLES DE LA SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
 
 //pre
 int sol(int n){
@@ -105,10 +104,10 @@ int sol(int n){
   * [X] Complejidad
   * [X] Post
 * [ ] 229. Cuentas paralelas
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 230. Desórdenes temporales
   * [ ] Pre
   * [ ] Invariante
