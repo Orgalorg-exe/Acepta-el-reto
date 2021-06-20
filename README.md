@@ -72,7 +72,7 @@ int sol(int n){
 * [ ] 152. Va de modas
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 167. Pintando fractales
   * [ ] Pre
