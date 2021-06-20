@@ -14,7 +14,8 @@ void lecturaDelVector(const int n, int v[]);
 //MAIN
 int main() {
 
-	int n, v[MAX];
+	int n;
+	int* v = new int[MAX];
 	cin >> n;
 
 	while (n != 0) {
@@ -23,6 +24,7 @@ int main() {
 		cin >> n;
 	}
 
+	delete[] v;
 	return 0;
 }
 

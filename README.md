@@ -102,8 +102,8 @@ int sol(int n){
 * [ ] 224. Los bocadillos de la
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 229. Cuentas paralelas
   * [ ] Pre
   * [ ] Invariante
