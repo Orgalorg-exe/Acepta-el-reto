@@ -7,7 +7,7 @@ using namespace std;
 //constantes
 const int MAX = 100000;
 
-//Declaración de la función
+//Declaración de funciones
 int cuentasParalelas(int n, int v[], int sum);
 void lecturaDeDatos(int n, int v[], int& sum);
 

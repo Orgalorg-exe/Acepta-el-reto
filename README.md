@@ -231,10 +231,10 @@ int sol(int n){
   * [ ] Complejidad
   * [ ] Post
 * [ ] 528. El extraño caso de la multiplicación
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 570. DNI incompleto
   * [ ] Pre
   * [ ] Invariante
