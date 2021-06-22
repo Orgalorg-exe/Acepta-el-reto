@@ -206,10 +206,10 @@ int sol(int n){
   * [ ] Complejidad
   * [ ] Post
 * [ ] 420. El secreto de la bolsa
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 460. Base de raíz de 10
   * [ ] Pre
   * [ ] Invariante

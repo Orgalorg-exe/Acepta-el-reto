@@ -1,64 +1,84 @@
+//DATOS PREVIOS
+
+//includes
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-string cad;
-int n;
+//constantes
+const int MAX = 250000;
 
-int numSumas(string cad, int n);
+//Declaración de funciones
+int numSumas(int n, int v[], int k);
+void lecturaDeDatos(int& n, int v[], int& k);
 
+//MAIN
 int main() {
-	
-	int m = 0;
-	cin >> m;
 
-	for (m; m > 0; --m) {
-	
-		cin >> n >> cad;
+	int numCasos, n, k;
+	int* v = new int[MAX];
 
-		cout << numSumas(cad, n) << endl;
+	cin >> numCasos;
+
+	for (numCasos; numCasos > 0; --numCasos) {
+		n = k = 0;
+		lecturaDeDatos(n, v, k);
+		cout << numSumas(n, v, k) << endl;
 	}
 
+	delete[] v;
 	return 0;
 }
 
-int numSumas(string cad, int n) {
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//DETALLES DE LA SOLUCIÓN
 
+//Problema de ventana deslizante
+
+/*{ Pre: 0 <= n <= longitud(v) 
+          0 < k }*/
+int numSumas(int n, int v[], int k) {
+	//Invariante
+	//
 	int ret = 0;
-	int a = 0, b = 1;
-	int sum = (cad[a] - '0');
+	int a = 0, b = 0;
+	int sum = 0;
 
-	if (sum == n) {
-		ret = 1;
-	}
+	//Complejidad
+	// O(n)
+	// la ventana avanza en el 
+	// recorrido del vector
+	// con cada iteración.
+	while (b < n) {
 
-	while (b < cad.length()) {
-
-		if (sum + (cad[b] - '0') <= n) {
-			sum += (cad[b] - '0');
+		if (sum + v[b] <= k) {
+			sum += v[b];
 			++b;
 		}
-		else {
-			sum -= (cad[a] - '0');
+		else if ( a < b) {
+			sum -= v[a];
 			++a;
-
-			if (a == b) {
-				if ((cad[b] - '0') > n) {
-					++a;
-					++b;
-				}
-				else {
-					sum = (cad[b] - '0');
-					++b;
-				}
-			}
+		}
+		else if (a == b){
+			++a;
+			++b;
+			sum = 0;
 		}
 
-		if (sum == n) {
-			++ret;
-		}
+		ret = (sum == k) ? ret + 1 : ret;
 	}
 
 	return ret;
+}
+/*{ Pos: #i, j : 0 <= i <= j < n : k = (S h : i <= h <= j : v[h])}*/
+
+
+void lecturaDeDatos(int& n, int v[], int& k) {
+	string aux;
+	cin >> k >> aux; 
+	for (int i = 0; i < aux.length(); ++i) {
+		v[i] = aux[i] - '0';
+		++n;
+	}
 }
