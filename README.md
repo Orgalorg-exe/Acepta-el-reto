@@ -155,10 +155,10 @@ int sol(int n){
   * [ ] Complejidad
   * [ ] Post
 * [ ] 346. El hombre con seis dedos
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
-  * [ ] Post
+  * [X] Complejidad
+  * [X] Post
 * [ ] 347. Haciendo pajaritas de papel
   * [ ] Pre
   * [ ] Invariante
