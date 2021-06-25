@@ -188,7 +188,7 @@ int sol(int n){
 * [ ] 406. Yonge Street
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 410. Dígitos saltarines
   * [ ] Pre

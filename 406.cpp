@@ -1,72 +1,75 @@
+//DATOS PREVIOS
+
+//includes
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-void yongeStreet(string& calle);
+//Declaración de funciones
+void updateYongeStreet(string& v);
+void printYongeStreet(string v);
 
+//MAIN
 int main() {
-
-	string calle;
-	int n, p;
-
-	cin >> calle;
-
+	string v;
+	cin >> v;
 	while (cin) {
-
-		yongeStreet(calle);
-
-		cin >> n >> p;
-
-		cout << calle[p - 1];
-
-		for (int i = 1; i < n; ++i) {
-			cin >> p;
-			cout << ' ' << calle[p - 1];
-		}
-
-		cout << endl;
-
-		cin >> calle;
+		updateYongeStreet(v);
+		printYongeStreet(v);
+		cin >> v;
 	}
 
 	return 0;
 }
 
-void yongeStreet(string& calle) {
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
 
-	int a = calle.length() - 2, b = calle.length() - 1;
+/* { Pre: }*/
+void updateYongeStreet(string& v) {
 
-	if (isalpha(calle[b]))
-		calle[b] = '.';
+	//Invariante
+	//
+	int a = v.length() - 1, b = v.length() - 1;
 
-	while (b > -1 && calle[b] != '.')
-		--b;
-
-	a = b - 1;
-
+	//Complejidad
+	// O(n)
+	// la ventana recorre la palabra
 	while (a > -1) {
 
-		if (isalpha(calle[a])) {
-
-			if (b == calle.length() - 1)
-				calle[a] = '.';
+		if (isalpha(v[a])) {
+			if (b == v.length() - 1)
+				v[a] = '.';
 			else {
-				swap(calle[a], calle[b]);
+				swap(v[a], v[b]);
 				--b;
 			}
 		}
 
-		else if (calle[a] == '|') {
-
-			b = a;
-
-			while (b > -1 && calle[b] != '.')
+		else if (v[a] == '|') {
+			b = a - 1;
+			while (b > -1 && v[b] != '.')
 				--b;
-
 			a = b;
 		}
 
 		--a;
 	}
+}
+/*{ Pos: }*/
+
+void printYongeStreet(string v) {
+	int n, p;
+	cin >> n;
+
+	if (n > 0) {
+		cin >> p;
+		cout << v[p - 1];
+		for (n; n > 1; --n) {
+			cin >> p;
+			cout << ' ' << v[p - 1];
+		}
+	}
+	cout << endl;
 }
