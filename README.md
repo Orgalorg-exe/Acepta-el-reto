@@ -116,7 +116,7 @@ int sol(int n){
 * [ ] 237. Números polidivisibles
   * [ ] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
   * [ ] Detalles de la solución
 * [ ] 242. Erasmús
