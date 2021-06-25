@@ -216,9 +216,9 @@ int sol(int n){
   * [X] Complejidad
   * [ ] Post
 * [ ] 472. Caminando voy
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 506. Tensión descompensada
   * [ ] Pre
