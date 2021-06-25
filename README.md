@@ -64,9 +64,9 @@ int sol(int n){
   * [ ] Complejidad
   * [ ] Post
 * [ ] 140. Suma de dígitos
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
-  * [ ] Complejidad
+  * [X] Complejidad
   * [ ] Post
 * [ ] 152. Va de modas
   * [ ] Pre

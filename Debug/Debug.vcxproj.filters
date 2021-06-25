@@ -20,6 +20,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\167.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\140.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

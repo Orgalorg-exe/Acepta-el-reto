@@ -23,6 +23,8 @@ int main() {
 //IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
 //Y DETALLES DE LA SOLUCIÓN
 
+//Algoritmo recursivo
+
 /* { Pre: 0 <= n} */
 int sumaDigitos(int n){
 	//Complejidad
