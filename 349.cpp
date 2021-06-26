@@ -1,9 +1,13 @@
-#include <iostream>
+//DATOS PREVIOS
 
+//includes
+#include<iostream>
 using namespace std;
 
+//Declaración de funciones
 int calculadoraPolaca();
 
+//MAIN
 int main() {
 
 	int c;
@@ -16,24 +20,22 @@ int main() {
 	return 0;
 }
 
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
+
+/* { Pre: } */
 int calculadoraPolaca() {
 
 	char c;
 	cin >> c;
 
-	if (c == '0') return 0;
-	if (c == '1') return 1;
-	if (c == '2') return 2;
-	if (c == '3') return 3;
-	if (c == '4') return 4;
-	if (c == '5') return 5;
-	if (c == '6') return 6;
-	if (c == '7') return 7;
-	if (c == '8') return 8;
-	if (c == '9') return 9;
+	//Caso Base
+	if (isdigit(c)) return c - '0';
 
+	//Casos recursivo
 	if (c == '+') return calculadoraPolaca() + calculadoraPolaca();
 	if (c == '*') return calculadoraPolaca() * calculadoraPolaca();
 	if (c == '-') return calculadoraPolaca() - calculadoraPolaca();
 	if (c == '/') return calculadoraPolaca() / calculadoraPolaca();
 }
+/* { Pos: } */
