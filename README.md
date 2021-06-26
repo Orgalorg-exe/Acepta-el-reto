@@ -130,7 +130,7 @@ int sol(int n){
   * [ ] Complejidad
   * [ ] Post
 * [ ] 272. Tres dedos en cada mano
-  * [ ] Pre
+  * [X] Pre
   * [ ] Invariante
   * [ ] Complejidad
   * [ ] Post
