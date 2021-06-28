@@ -1,25 +1,32 @@
-#include <iostream>
+//DATOS PREVIOS
 
+//includes
+#include<iostream>
 using namespace std;
 
+
+//Declaración de funciones
 int pajaritasDePapel(int b, int a, int& n);
 
+//MAIN
 int main() {
 
 	int b, a, n = 0;
 	cin >> b >> a;
 
-	while ( b != 0) {
-
+	while (b != 0) {
 		cout << pajaritasDePapel(b, a, n) << endl;
-
 		cin >> b >> a;
 		n = 0;
 	}
-	
+
 	return 0;
 }
 
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
+
+/* { Pre: } */
 int pajaritasDePapel(int b, int a, int& n) {
 
 	//Caso base
@@ -39,3 +46,4 @@ int pajaritasDePapel(int b, int a, int& n) {
 
 	return n;
 }
+/* { Pos: } */

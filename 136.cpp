@@ -15,9 +15,7 @@ int main() {
 	cin >> h >> c;
 
 	while (h != 0) {
-
 		cout << encadenandoTrolls(h, c, p) << endl;
-
 		cin >> h >> c;
 		p = 0;
 	}
