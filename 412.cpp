@@ -1,42 +1,52 @@
-#include <iostream>
+//DATOS PREVIOS
 
+//includes
+#include<iostream>
 using namespace std;
 
-const int MAX_TAM = 50;
+//constantes
+const int MAX = 50;
 const char BLANCO = '.', NEGRO = 'X';
-char v[MAX_TAM][MAX_TAM];
-int f, c;
 
-void FloodFill(int x, int y, char new_color);
-bool hayOvejaBlanca();
+//Declaración de funciones
+void lecturaDeDatos(int x, int y, char v[][MAX]);
+void FloodFill(int x, int maxX, int y, int maxY, char v[][MAX], char new_color);
+string ovejaBlanca(int x, int y, int v[][MAX]);
+bool hayOvejaBlanca(int x, int y, int v[][MAX]);
 
+
+//MAIN
 int main() {
+	char v[MAX][MAX];
+	int x, y;
 
-	cin >> c >> f;
+	cin >> x >> y;
 
 	while (cin) {
-
-		for (int i = 0; i < f; ++i) {
-			for (int j = 0; j < c; ++j) {
-				cin >> v[i][j];
-			}
-		}
-
-		FloodFill(0, 0, NEGRO);
-	
-		if (hayOvejaBlanca())
-			cout << "SI\n";
-		else
-			cout << "NO\n";
-
-		cin >> c >> f;
+		lecturaDeDatos(x, y, v);
+		FloodFill(0, x, 0, y, v, NEGRO);
+		cout << ovejaBlanca(x, y, v) << endl;
+		cin >> x >> y;
 	}
 
 	return 0;
 }
 
-void FloodFill(int x, int y, char new_color) {
-	if ((x < 0  || x >= c )||(y < 0 || y >= f)) {
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
+
+void lecturaDeDatos(int x, int y, char v[][MAX]) {
+	for (int i = 0; i < y; ++i) {
+		for (int j = 0; j < x; ++j) {
+			cin >> v[i][j];
+		}
+	}
+}
+
+
+void FloodFill(int x, int maxX, int y, int maxY, char v[][MAX], char new_color) {
+	
+	if ((x < 0  || x >= maxX )||(y < 0 || y >= maxY)) {
 		return;
 	}
 	else if ( v[y][x] == new_color) {
@@ -44,26 +54,31 @@ void FloodFill(int x, int y, char new_color) {
 	}
 
 	v[y][x] = new_color;
-	FloodFill(x - 1, y, new_color);
-	FloodFill(x, y - 1, new_color);
-	FloodFill(x + 1, y, new_color);
-	FloodFill(x, y + 1, new_color);
+	FloodFill(x - 1, maxX, y, maxY, v, new_color);
+	FloodFill(x, maxX, y - 1, maxY, v, new_color);
+	FloodFill(x + 1, maxX, y, maxY, v, new_color);
+	FloodFill(x, maxX, y + 1, maxY, v, new_color);
 }
-bool hayOvejaBlanca() {
 
-	bool hayBlanca = false;
-	int x = 2, y = 2;
+string ovejaBlanca(int x, int y, char v[][MAX]) {
+	if (hayOvejaBlanca(x, y, v))
+		return "SI";
+	return "NO";
+}
 
-	while (y < f - 2 && v[y][x] != BLANCO) {
-		x++;
-		if (x >= c - 2) {
-			x = 2;
-			y++;
+/* { Pre: } */
+bool hayOvejaBlanca(int x, int y, char v[][MAX]) {
+
+	int i = 2, j = 2;
+
+	while (i < y - 2 && v[i][j] != BLANCO) {
+		j++;
+		if (j >= x - 2) {
+			j = 2;
+			i++;
 		}
 	}
 
-	if (y < f - 2)
-		hayBlanca = true;
-
-	return hayBlanca;
+	return i < y - 2;
 }
+/* { Pos: } */
