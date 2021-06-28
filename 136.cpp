@@ -1,16 +1,21 @@
-#include <iostream>
+//DATOS PREVIOS
 
+//includes
+#include<iostream>
 using namespace std;
 
+
+//Declaración de funciones
 int encadenandoTrolls(int h, int c, int& p);
 
+//MAIN
 int main() {
 
 	int h, c, p = 0;
 	cin >> h >> c;
 
 	while (h != 0) {
-		
+
 		cout << encadenandoTrolls(h, c, p) << endl;
 
 		cin >> h >> c;
@@ -20,8 +25,13 @@ int main() {
 	return 0;
 }
 
+
+//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
+//Y DETALLES DE LA SOLUCIÓN
+
+/* { Pre: } */
 int encadenandoTrolls(int h, int c, int& p) {
-	
+
 	//Caso base
 	if (c <= h * 2) {
 		return 0;
@@ -36,3 +46,4 @@ int encadenandoTrolls(int h, int c, int& p) {
 	encadenandoTrolls(h, pl, p);
 	return p;
 }
+/* { Pre: } */

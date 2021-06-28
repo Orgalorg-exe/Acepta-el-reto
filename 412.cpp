@@ -11,8 +11,8 @@ const char BLANCO = '.', NEGRO = 'X';
 //Declaración de funciones
 void lecturaDeDatos(int x, int y, char v[][MAX]);
 void FloodFill(int x, int maxX, int y, int maxY, char v[][MAX], char new_color);
-string ovejaBlanca(int x, int y, int v[][MAX]);
-bool hayOvejaBlanca(int x, int y, int v[][MAX]);
+string ovejaBlanca(int x, int y, char v[][MAX]);
+bool hayOvejaBlanca(int x, int y, char v[][MAX]);
 
 
 //MAIN
