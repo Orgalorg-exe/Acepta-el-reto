@@ -1,14 +1,8 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 using namespace std;
 
-
-//Declaración de funciones
 int encadenandoTrolls(int h, int c, int& p);
 
-//MAIN
 int main() {
 
 	int h, c, p = 0;

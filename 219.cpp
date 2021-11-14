@@ -11,13 +11,9 @@ int main() {
 	int numCasos;
 	cin >> numCasos;
 
-	for (int i = 0; i < numCasos; i++) {
-
+	for (; numCasos > 0; numCasos--) {
 		cin >> n;
-		for (int j = 0; j < n; j++) {
-			cin >> v[j];
-		}
-
+		for (int j = 0; j < n; j++) { cin >> v[j]; }
 		cout << numPares(n, v) << endl;
 	}
 
@@ -25,16 +21,11 @@ int main() {
 }
 
 int numPares(int n, int v[]) {
-
 	int ret = 0;
 	int i = 0;
 	
 	while (i < n) {
-
-		if (v[i] % 2 == 0) {
-			ret++;
-		}
-
+		if (!(v[i] % 2)) { ret++; }
 		i++;
 	}
 

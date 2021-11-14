@@ -3,12 +3,13 @@
 using namespace std;
 
 const int MAX = 300000;
-int v[MAX], n, k, sum;
+
 
 int minUvas(int v[], int n, int k, int sumTotal);
 
 int main() {
-
+	int* v = new int[MAX];
+	int n, k, sum;
 	cin >> n >> k;
 
 	while (n != 0) {
@@ -29,6 +30,8 @@ int main() {
 		cin >> n >> k;
 	}
 
+	delete[] v;
+
 	return 0;
 }
 
@@ -36,7 +39,7 @@ int main() {
 int minUvas(int v[], int n, int k, int sumTotal) {
 
 	int ret = sumTotal;
-	int a = 0, b = 0 ;
+	int a = 0, b = 0;
 	int suma = 0;
 
 	while (b < n || suma >= k) {

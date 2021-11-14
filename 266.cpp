@@ -4,69 +4,56 @@ using namespace std;
 
 const int MAX = 500;
 
-void procesarCopistas(char beta[]);
+void procesarCopistas(char v[]);
 
 int main() {
 
-	char cuadro[MAX][MAX];
-	char alpha[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+	char* v = new char[MAX * MAX];
+	int x = 0, y = 0;
 
-		
-	int c = 0, f = 0;
-	cin >> f;
-	cin >> c;
+	cin >> y >> x;
 
-	//Bucle principal
-	while ((f != 0) && (c != 0)) {
-
-		char beta[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-
-		
+	while (x != 0 && y != 0) {
+		char alpha[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+					       'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+					       'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 		//Guardo la matriz
-		for (int i = 0; i < f; ++i) {
-			for (int j = 0; j < c; ++j) {
-				cin >> cuadro[i][j];
+		for (int i = 0; i < y; ++i) {
+			for (int j = 0; j < x; ++j) {
+				cin >> v[j + x*i];
 			}
 		}
 
 		//Algoritmo
-		procesarCopistas(beta);
+		procesarCopistas(alpha);
 
 		//Imprimo la matriz
-		for (int i = 0; i < f; ++i) {
-			for (int j = 0; j < c; ++j) {
-				//Busco la letra de cuadro en alpha e imprimo su correspondiente
-				int k = 0;
-				while (cuadro[i][j] != alpha[k]) {
-					++k;
-				}
-				cout << beta[k];
+		for (int i = 0; i < y; ++i) {
+			for (int j = 0; j < x; ++j) {
+				cout << alpha[v[j + x*i] - 'A'];
 			}
 			cout << endl;
 		}
 
-		cin >> f;
-		cin >> c;
+		cin >> y >> x;
 	}
 	
+	delete[] v;
+
 	return 0;
 }
 
-void procesarCopistas(char beta[]) {
+void procesarCopistas(char v[]) {
+
 	int numCopistas = 0;
 	cin >> numCopistas;
 
 	char in, out;
 
-	//Configuro la leyenda
 	for (int i = 0; i < numCopistas; ++i) {
-		cin >> in;
-		getchar();
-		cin >> out;
-
-		//Busco y reemplazo
+		cin >> in >> out;
 		for (int j = 0; j < 26; ++j) {
-			if (beta[j] == in) { beta[j] = out; }
+			if (v[j] == in) v[j] = out;
 		}
 	}
 }

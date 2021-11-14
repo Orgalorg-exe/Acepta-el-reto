@@ -1,7 +1,21 @@
-﻿  412.cpp
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(28,30): error C2664: 'std::string ovejaBlanca(int,int,int [][50])': cannot convert argument 3 from 'char [50][50]' to 'int [][50]'
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(28,29): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(14,8): message : see declaration of 'ovejaBlanca'
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(64,5): error C2664: 'bool hayOvejaBlanca(int,int,int [][50])': cannot convert argument 3 from 'char [][50]' to 'int [][50]'
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(64,27): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\412.cpp(15,6): message : see declaration of 'hayOvejaBlanca'
+﻿  104.cpp
+  136.cpp
+  140.cpp
+  167.cpp
+  237.cpp
+  272.cpp
+  295.cpp
+  347.cpp
+  349.cpp
+  515.cpp
+  528.cpp
+  138.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\Project1\138.cpp': No such file or directory
+  250.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\Project1\250.cpp': No such file or directory
+  354.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\Project1\354.cpp': No such file or directory
+  444.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\Project1\444.cpp': No such file or directory
+  Generating Code...
+C:\Users\scc_1\Documents\Personal\Github\Acepta el reto\349.cpp(32): warning C4715: 'calculadoraPolaca': not all control paths return a value

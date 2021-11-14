@@ -1,14 +1,9 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 using namespace std;
 
-//Declaración de funciones
 string esPolidivisible(long long n);
 bool esPolidivisible(long long n, short& numDig);
 
-//MAIN
 int main() {
 	long long int n;
 	cin >> n;
@@ -21,27 +16,20 @@ int main() {
 	return 0;
 }
 
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//Y DETALLES DE LA SOLUCIÓN
-
 string esPolidivisible(long long n) {
 	short foo;
 
-	if (esPolidivisible(n, foo)) {
+	if (esPolidivisible(n, foo)) 
 		return "POLIDIVISIBLE";
-	}
 
 	return "NO POLIDIVISIBLE";
 }
 
 //Algoritmo recursivo
-
  /* { Pre: } */
 bool esPolidivisible (long long n, short & numDig ){
 	//Complejidad
 	// O(n)
-	// depende del número de
-	// dígitos de n
 
 	//Caso base
 	if (n < 10) {

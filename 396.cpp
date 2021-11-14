@@ -1,23 +1,21 @@
 #include <iostream>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
-const int MAX_TAM = 100000;
-int v[MAX_TAM], n, k;
+const int MAX = 100000;
 
-int busquedaBinaria(int v[], int n, int k);
-bool hayAtrilesParaTodos(int v[], int n, int k, int m);
+int busquedaBinaria(int v[], int n, int numPartituras);
+bool hayPartiturasParaTodos(int v[], int n, int numPartituras, int m);
 
 int main() {
+	int n, k;
+	int* v = new int[MAX];
 
 	cin >> k >> n;
-
 	while (cin) {
-
-		for (int i = 0; i < n; ++i) {
-			cin >> v[i];
-		}
+		for (int i = 0; i < n; ++i) cin >> v[i];
 
 		sort(v, v + n, greater<int>());
 		cout << busquedaBinaria(v, n, k) << endl;
@@ -25,45 +23,40 @@ int main() {
 		cin >> k >> n;
 	}
 
+	delete[] v;
 	return 0;
 }
 
 
-//Si admitimos un máximo de k personas en un atril
-int busquedaBinaria(int v[], int n, int k) {
+//Búsqueda en el espacio de soluciones
 
-	int ini = -1, fin = v[0], m;
+
+//Si admitimos un máximo de k personas en un atril
+int busquedaBinaria(int v[], int n, int numPartituras) {
+
+	int ini = -1, fin = (n == 0) ? 0 : v[0], m;
 
 	while (fin - ini != 1) {
 		m = (fin + ini) / 2;
-		if (m != 0 && hayAtrilesParaTodos(v, n, k, m))
+		if (m != 0 && hayPartiturasParaTodos(v, n, numPartituras, m))
 			fin = m;
 		else
 			ini = m;
 	}
 
-	if (n == 0)
-		fin = 0;
-
 	return fin;
 }
 
-//¿tenemos atriles para todos?
-bool hayAtrilesParaTodos(int v[], int n, int k, int m) {
-
-	int count = 0;
+//¿tenemos partituras para todos?
+bool hayPartiturasParaTodos(int v[], int n, int numPartituras, int m) {
+	int numAtriles = 0;
 	int i = 0;
 
-	while (count <= k && v[i] > m && i < n) {
-
-		count += v[i] / m;
-
-		if (v[i] % m != 0)
-			++count;
-
+	while (numAtriles <= numPartituras && i < n ) {
+		// nAtr += nMusic / maxMuicPorAtr
+		numAtriles += ceil((float)v[i] / (float) m);
 		++i;
 	}
-	count += n - i;
 
-	return count <= k;
+	return numPartituras >= numAtriles;
 }

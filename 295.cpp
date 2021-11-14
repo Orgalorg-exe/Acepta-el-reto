@@ -7,14 +7,11 @@ const int MOD = 31543;
 int elevar(int n, int e);
 
 int main() {
-
 	int n, e;
 	cin >> n >> e;
 
 	while (n != 0 || e != 0) {
-	
 		cout << elevar(n % MOD, e) << endl;
-
 		cin >> n >> e;
 	}
 

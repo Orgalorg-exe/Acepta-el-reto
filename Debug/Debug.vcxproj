@@ -21,6 +21,43 @@
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\104.cpp" />
+    <ClCompile Include="..\114.cpp" />
+    <ClCompile Include="..\136.cpp" />
+    <ClCompile Include="..\140.cpp" />
+    <ClCompile Include="..\152.cpp" />
+    <ClCompile Include="..\167.cpp" />
+    <ClCompile Include="..\171.cpp" />
+    <ClCompile Include="..\219.cpp" />
+    <ClCompile Include="..\222.cpp" />
+    <ClCompile Include="..\237.cpp" />
+    <ClCompile Include="..\242.cpp" />
+    <ClCompile Include="..\266.cpp" />
+    <ClCompile Include="..\272.cpp" />
+    <ClCompile Include="..\295.cpp" />
+    <ClCompile Include="..\306.cpp" />
+    <ClCompile Include="..\314.cpp" />
+    <ClCompile Include="..\342.cpp" />
+    <ClCompile Include="..\346.cpp" />
+    <ClCompile Include="..\347.cpp" />
+    <ClCompile Include="..\349.cpp" />
+    <ClCompile Include="..\384.cpp" />
+    <ClCompile Include="..\396.cpp" />
+    <ClCompile Include="..\420.cpp" />
+    <ClCompile Include="..\460.cpp" />
+    <ClCompile Include="..\472.cpp" />
+    <ClCompile Include="..\515.cpp" />
+    <ClCompile Include="..\528.cpp" />
+    <ClCompile Include="..\586.cpp" />
+    <ClCompile Include="..\590.cpp" />
+    <ClCompile Include="..\Project1\138.cpp" />
+    <ClCompile Include="..\Project1\250.cpp" />
+    <ClCompile Include="..\Project1\354.cpp" />
+    <ClCompile Include="..\Project1\444.cpp" />
+    <ClCompile Include="..\Project1\574.cpp" />
+    <ClCompile Include="538.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

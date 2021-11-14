@@ -1,13 +1,8 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 using namespace std;
 
-//constantes
 const int MAX = 50;
 
-//Declaración de funciones
 string esEstable(int pi, int di, int pd, int dd);
 bool esEstable(int pi, int di, int pd, int dd, int& p);
 
@@ -15,7 +10,6 @@ bool esEstable(int pi, int di, int pd, int dd, int& p);
 int main() {
 
 	int pi, di, pd, dd;
-
 	cin >> pi >> di >> pd >> dd;
 
 	while (!(pi == 0 && di == 0 && pd == 0 && dd == 0)) {
@@ -25,9 +19,6 @@ int main() {
 
 	return 0;
 }
-
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//Y DETALLES DE LA SOLUCIÓN
 
 string esEstable(int pi, int di, int pd, int dd) {
 	int foo;
@@ -40,7 +31,6 @@ string esEstable(int pi, int di, int pd, int dd) {
 bool esEstable(int pi, int di, int pd, int dd, int & p) {
 
 	bool i = true, d = true;
-
 	int pi_aux, di_aux, pd_aux, dd_aux;
 
 	if (pi == 0) {

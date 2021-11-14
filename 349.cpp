@@ -1,31 +1,23 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 using namespace std;
 
-//Declaración de funciones
 int calculadoraPolaca();
 
-//MAIN
 int main() {
 
-	int c;
-	cin >> c;
+	int numCasos;
+	cin >> numCasos;
 
-	for (c; c > 0; --c) {
+	for (; numCasos > 0; --numCasos) {
 		cout << calculadoraPolaca() << endl;
 	}
 
 	return 0;
 }
 
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//Y DETALLES DE LA SOLUCIÓN
-
+//Recursivo
 /* { Pre: } */
 int calculadoraPolaca() {
-
 	char c;
 	cin >> c;
 
