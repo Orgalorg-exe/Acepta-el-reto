@@ -21,16 +21,12 @@ int main() {
 	return 0;
 }
 
-//{ Pre: 0 < n <= 100.000}
 long long int numParejas(int n, long long int v[]) {
 
-	//Invariante
-	//
 	long long int numParejas = 0;
 	long long int suma = v[0];
 	int i = 1;
 	
-	// O(n)
 	while (i < n) {
 		numParejas += v[i] * suma;
 		suma += v[i];
@@ -39,4 +35,3 @@ long long int numParejas(int n, long long int v[]) {
 
 	return numParejas;
 }
-//{ Pos: #i : : }

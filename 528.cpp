@@ -21,16 +21,11 @@ int main() {
 	return 0;
 }
 
-// { Pre: 0 <= n <= longitud(v) ^
-//        P.t. i : 0 <= i < n: v[i] >= 0 }
 long long int numMultiplicaciones(int n, float v[]) {
 	long long int ret = 0;
 	int i = 0;
 	long long int a = 0, b = 0, c = 0;
-	// { I :
-	// }
 
-	// O(n)
 	while (i < n) {
 		if (v[i] == 0 || v[i] == 1)
 			ret += n - ++a;
@@ -43,4 +38,3 @@ long long int numMultiplicaciones(int n, float v[]) {
 
 	return ret;
 }
-//{ Pos: # i,j : 0 <= i < j < n : v[i]*v[j] <= i || j <= v[i]*v[j] }

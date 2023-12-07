@@ -17,8 +17,6 @@ int main() {
 	return 0;
 }
 
-//Recursión
-/* { Pre: } */
 int pajaritasDePapel(int b, int a, int& n) {
 
 	//Caso base
@@ -37,4 +35,3 @@ int pajaritasDePapel(int b, int a, int& n) {
 
 	return n;
 }
-/* { Pos: } */

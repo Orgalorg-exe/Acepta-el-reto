@@ -17,19 +17,12 @@ int main() {
 	return 0;
 }
 
-
-//pre
 string baseRaizDiez(string n) {
 
-	//Invariante
-	//
 	string ret = "";
 	ret += n[0];
 	int i = 1;
 
-	//Complejidad
-	// O(n)
-	// n = n.length
 	while (i < n.length()) {
 		ret += "0";
 		ret += n[i];
@@ -38,4 +31,3 @@ string baseRaizDiez(string n) {
 
 	return ret;
 }
-//post

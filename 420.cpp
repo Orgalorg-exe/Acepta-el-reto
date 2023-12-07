@@ -32,17 +32,12 @@ int main() {
 	return 0;
 }
 
-//Problema de ventana deslizante
-// { Pre: 0 <= n <= longitud(v) ^ 0 < k }
 int numSumas(int n, int v[], int k) {
-	//Invariante
-	//
+
 	int ret = 0;
 	int a = 0, b = 0;
 	int sum = 0;
 
-
-	// O(n)
 	while (b < n) {
 
 		if (sum + v[b] <= k) {
@@ -64,4 +59,3 @@ int numSumas(int n, int v[], int k) {
 
 	return ret;
 }
-// { Pos: #i, j : 0 <= i <= j < n : k = (S h : i <= h <= j : v[h])}

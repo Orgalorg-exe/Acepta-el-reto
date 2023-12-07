@@ -21,8 +21,6 @@ int main() {
 	return 0;
 }
 
-
-/* { Pre: 1 <= ini <= n <= fin <= 250.000} */
 bool adivinaElNumero(int ini, int fin, int n, int k) {
 	
 	//Caso base
@@ -40,4 +38,3 @@ bool adivinaElNumero(int ini, int fin, int n, int k) {
 	else
 		return adivinaElNumero(ini, fin, n, k - 1);
 }
-/* { Pos: } */

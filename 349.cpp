@@ -15,8 +15,6 @@ int main() {
 	return 0;
 }
 
-//Recursivo
-/* { Pre: } */
 int calculadoraPolaca() {
 	char c;
 	cin >> c;
@@ -30,4 +28,3 @@ int calculadoraPolaca() {
 	if (c == '-') return calculadoraPolaca() - calculadoraPolaca();
 	if (c == '/') return calculadoraPolaca() / calculadoraPolaca();
 }
-/* { Pos: } */

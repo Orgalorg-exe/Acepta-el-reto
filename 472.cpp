@@ -22,15 +22,10 @@ int main() {
 	return 0;
 }
 
-
-// { Pre: 0 <= n <= longitud(v) ^ 0 <= d }
 bool esApta(int n, int v[], int d) {
 	bool ret;
 	int a = 0, b = 0;
-	// { I :
-	// }
 
-	// O(n)
 	while ((b < n) && (v[b] - v[a] <= d)) {
 
 		while ((b + 1 < n) && v[b + 1] <= v[b]) {
@@ -45,8 +40,6 @@ bool esApta(int n, int v[], int d) {
 
 	return ret;
 }
-/* { Pos: P.t. i,j : 0 <= i <= j < n : } */
-
 
 string caminandoVoy(bool esApta) {
 	if (esApta)

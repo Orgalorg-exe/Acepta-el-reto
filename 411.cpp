@@ -1,15 +1,10 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 #include <string>
 
 using namespace std;
 
-//Declaración de la función
 int numElefantes(int max);
 
-//MAIN
 int main() {
 
 	long long int max;
@@ -26,24 +21,14 @@ int main() {
 	return 0;
 }
 
-
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//DETALLES DE LA SOLUCIÓN
-
-//pre
 int numElefantes(int max) {
 
 	long long int pesoAcum = 0, input;
 	long long int ret = 0;
-	//Invariante
 	
 	cin >> input;
 	pesoAcum += input;
 
-	// O(n)
-	// n = max, en el peor caso
-	// acumularemos max elefantes
-	// de peso = 1
 	while (pesoAcum <= max && input != 0) {
 		++ret;
 		cin >> input;
@@ -52,6 +37,3 @@ int numElefantes(int max) {
 
 	return ret;
 }
-//post
-
-

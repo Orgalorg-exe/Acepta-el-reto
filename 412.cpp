@@ -1,21 +1,15 @@
-//DATOS PREVIOS
-
-//includes
 #include<iostream>
 using namespace std;
 
-//constantes
 const int MAX = 50;
 const char BLANCO = '.', NEGRO = 'X';
 
-//Declaración de funciones
 void lecturaDeDatos(int x, int y, char v[][MAX]);
 void FloodFill(int x, int maxX, int y, int maxY, char v[][MAX], char new_color);
 string ovejaBlanca(int x, int y, char v[][MAX]);
 bool hayOvejaBlanca(int x, int y, char v[][MAX]);
 
 
-//MAIN
 int main() {
 	char v[MAX][MAX];
 	int x, y;
@@ -31,9 +25,6 @@ int main() {
 
 	return 0;
 }
-
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//Y DETALLES DE LA SOLUCIÓN
 
 void lecturaDeDatos(int x, int y, char v[][MAX]) {
 	for (int i = 0; i < y; ++i) {
@@ -66,7 +57,6 @@ string ovejaBlanca(int x, int y, char v[][MAX]) {
 	return "NO";
 }
 
-/* { Pre: } */
 bool hayOvejaBlanca(int x, int y, char v[][MAX]) {
 
 	int i = 2, j = 2;
@@ -81,4 +71,3 @@ bool hayOvejaBlanca(int x, int y, char v[][MAX]) {
 
 	return i < y - 2;
 }
-/* { Pos: } */

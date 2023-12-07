@@ -24,9 +24,6 @@ int main() {
 	return 0;
 }
 
-// { Pre : 0 < n <= longitud(v) ^
-//		   sum = sum i : 0 <= i < n : v[i]
-// }
 int diaCambioBombin(int v[], int n, int sumDer) {
 	int ret = 0;
 	int i = 0;
@@ -49,4 +46,3 @@ int diaCambioBombin(int v[], int n, int sumDer) {
 	
 	return ret;
 }
-// { Pos: min i: 0 <= i < n : }

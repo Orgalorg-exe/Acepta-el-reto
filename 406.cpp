@@ -1,16 +1,11 @@
-//DATOS PREVIOS
-
-//includes
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-//Declaración de funciones
 void updateYongeStreet(string& v);
 void printYongeStreet(string v);
 
-//MAIN
 int main() {
 	string v;
 	cin >> v;
@@ -23,19 +18,11 @@ int main() {
 	return 0;
 }
 
-//IMPLEMENTACIÓN DE LA FUNCIÓN SOLUCIÓN
-//Y DETALLES DE LA SOLUCIÓN
 
-/* { Pre: }*/
 void updateYongeStreet(string& v) {
 
-	//Invariante
-	//
 	int a = v.length() - 1, b = v.length() - 1;
 
-	//Complejidad
-	// O(n)
-	// la ventana recorre la palabra
 	while (a > -1) {
 
 		if (isalpha(v[a])) {
@@ -57,7 +44,6 @@ void updateYongeStreet(string& v) {
 		--a;
 	}
 }
-/*{ Pos: }*/
 
 void printYongeStreet(string v) {
 	int n, p;

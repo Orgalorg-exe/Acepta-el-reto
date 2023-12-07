@@ -21,16 +21,10 @@ int main() {
 	return 0;
 }
 
-//Ventana deslizante
-/* { Pre: 0 <= n <= longitud(v), 0 < k} */
 int nacimientosConSeisDedos(int v[], int n, int k) {
-	//Invariante
-	//
 	int ret = 0;
 	int a = 0, b = 0;
 
-
-	// O(n)
 	while (a <= b && b < n) {
 		if (v[b] - v[a] < k) { ++b; }
 		else { ++a; }
@@ -40,4 +34,3 @@ int nacimientosConSeisDedos(int v[], int n, int k) {
 
 	return ret;
 }
-/*{ Pos: max i,j: 0 <= i <= j < n: v[j] - v[i] < k }*/

@@ -16,9 +16,7 @@ int main() {
 	return 0;
 }
 
-/* { Pre: 0 <= n } */
 int baseDiez2baseSeis(int n) {
-
 	//Caso base
 	if (n < 6)
 		return n;
@@ -26,4 +24,3 @@ int baseDiez2baseSeis(int n) {
 	//Caso recursivo
 	return (baseDiez2baseSeis(n / 6) * 10) + n % 6;
 }
-/* { Pos: } */

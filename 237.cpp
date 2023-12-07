@@ -25,12 +25,7 @@ string esPolidivisible(long long n) {
 	return "NO POLIDIVISIBLE";
 }
 
-//Algoritmo recursivo
- /* { Pre: } */
 bool esPolidivisible (long long n, short & numDig ){
-	//Complejidad
-	// O(n)
-
 	//Caso base
 	if (n < 10) {
 		numDig = 1;
@@ -42,4 +37,3 @@ bool esPolidivisible (long long n, short & numDig ){
 	++numDig;
 	return ret && (n % numDig == 0);
 }
-/* { Pos: } */

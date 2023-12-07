@@ -1,27 +1,10 @@
-#include<iostream>
-using namespace std;
+#include <iostream>
+#include <iomanip>
+#include <fstream>
 
-int ultDigFactorial(int n);
-
-int main() {
-	int numCasos, n;
-	cin >> numCasos;
-
-	for (numCasos; numCasos > 0; --numCasos) {
-		cin >> n;
-		cout << ultDigFactorial(n) << endl;
-	}
-
-	return 0;
-}
-
-// { Pre: 0 <= n}
-int ultDigFactorial(int n) {
+int resolver(int n) {
 	int ret = 0;
-	// { I : (ret = i : 0 <= i : n! mod 10)
-	// }
 
-	// O(1)
 	if (n == 0) { ret = 1; }
 	else if (n < 3 ) { ret = n; }
 	else if (n == 3) { ret = 6; }
@@ -29,4 +12,22 @@ int ultDigFactorial(int n) {
 
 	return ret;
 }
-// { Pos: i : [0, 1, 2, 4, 6] : i = n! mod 10} 
+
+void resuelveCaso() {
+    int n;
+	std::cin >> n;
+    
+    int sol = resolver(n);
+    
+	std::cout << sol << '\n';
+}
+
+int main() {
+
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
+
+    return 0;
+}
