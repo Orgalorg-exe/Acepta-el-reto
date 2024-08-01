@@ -1,29 +1,31 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <vector>
 
+std::vector<int> numTriang, map;
 
 TipoSolucion resolver(TipoDatos datos) {
     
     
 }
 
-bool resuelveCaso() {
+void resuelveCaso() {
     // leer los datos de la entrada
     
-    if (caso especial)
-        return false;
     
     TipoSolucion sol = resolver(datos);
-    
     // escribir sol
     
-    return true;
+    
 }
 
 int main() {
 
-    while (resuelveCaso());
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
 
     return 0;
 }

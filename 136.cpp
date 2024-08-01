@@ -3,7 +3,6 @@
 #include <fstream>
 
 int resolver(int h, int c, int& p) {
-
 	//Caso base
 	if (c <= h * 2)
 		return 0;
@@ -30,7 +29,6 @@ bool resuelveCaso() {
     std::cout << sol << '\n';
     
     return true;
-    
 }
 
 int main() {

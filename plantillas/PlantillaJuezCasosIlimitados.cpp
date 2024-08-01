@@ -20,7 +20,6 @@ bool resuelveCaso() {
     
     
     return true;
-    
 }
 
 int main() {

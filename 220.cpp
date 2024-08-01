@@ -1,5 +1,6 @@
 #include <iostream>
-using namespace std;
+#include <iomanip>
+#include <fstream>
 
 int calc[9][4] = { 
 	{2, 3, 4, 7},
@@ -12,36 +13,13 @@ int calc[9][4] = {
 	{2, 5, 7, 9},
 	{3, 6, 7, 8} };
 
-bool calculadora(int total, int ant);
-
-int main() {
-	int total, ant;
-	int numCasos;
-	cin >> numCasos;
-
-	for (; numCasos > 0; --numCasos) {
-
-		cin >> total >> ant;
-
-		if (calculadora(total, ant))
-			cout << "GANA" << endl;
-		else
-			cout << "PIERDE" << endl;
-	}
-
-	return 0;
-}
-
-
 bool calculadora(int total, int ant) {
 
 	//Caso base
 	if (total == 31) return true;
 
-	//Caso recursivo
-	
+	//Caso recursivo	
 	bool ganaRival = true;
-	//Busco todos los n�meros que permitan continuar las partida
 	int i = 0;
 	while (i < 4 && ganaRival) {
 		// Si es prometedor
@@ -52,4 +30,25 @@ bool calculadora(int total, int ant) {
 	}
 
 	return !ganaRival;
+}
+
+void resuelveCaso() {
+    int total, ant;
+	std::cin >> total >> ant;
+
+	if (calculadora(total, ant))
+		std::cout << "GANA\n";
+	else
+		std::cout << "PIERDE\n";
+}
+
+
+int main() {
+
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
+
+    return 0;
 }
