@@ -1,13 +1,14 @@
 ﻿#include <iostream>
 #include <iomanip>
 #include <fstream>
-#include <vector>
 #include <map>
+
+#define MAX 128
 
 int numBarcos;
 std::map<int, int> barcos;
 int gridLen;
-std::vector<std::vector<int>>grid;
+int grid[MAX][MAX];
 
 bool hayBarcoDer(int i, int j) {
 	if (j + 1 < gridLen && grid[i][j + 1] == 1) return true;
@@ -29,7 +30,10 @@ bool hayBarcoAbajoIzq(int i, int j) {
 	return false;
 }
 
-bool correcto() {
+bool resolver() {
+	int barcoLen;
+	int x, y;
+
 	//Recorro de arriba a abajo, de izquierda a derecha
 	for (int i = 0; i < gridLen; i++) {
 		for (int j = 0; j < gridLen; j++) {
@@ -38,41 +42,40 @@ bool correcto() {
 			if (grid[i][j] == 1) {
 				grid[i][j] = 0;
 
-				int barcoLen = 1;
-				int x = j, y = i;
+				barcoLen = 1;
+				x = j; y = i;
+
+				// Comprueba las diagonales
+				if (hayBarcoAbajoDer(y, x) || hayBarcoAbajoIzq(y, x)) return false;
 
 				//El barco solo puede continuar hacia la derecha o hacia abajo
+				if (hayBarcoDer(y, x)) {
+					// Comprueba que no haya también abajo
+					if (hayBarcoAbajo(y, x)) return false;
 
-				//Si continua hacia la derecha
-				while (hayBarcoDer(y, x)) {
-					//Si no toca con otro barco
-					if (hayBarcoAbajoIzq(y, x) || hayBarcoAbajo(y, x) || hayBarcoAbajoDer(y, x)) return false;
+					//Mientras continue a la derecha
+					while (hayBarcoDer(y, x)) {
+						//Me desplazo a la derecha
+						x++;
+						grid[y][x] = 0;
+						barcoLen++;
 
-					//Me desplazo a la derecha
-					x++;
-					grid[y][x] = 0;
-					barcoLen++;
-
-					//Y compruebo que no hay otro barco en la diagonal
-					if (hayBarcoAbajoDer(y, x)) return false;
+						//Y compruebo que no hay otro barco en la diagonal
+						if (hayBarcoAbajoDer(y, x)) return false;
+					}
 				}
+				else if (hayBarcoAbajo(y, x)) {
+					// Si hubiera un barco en la derecha, habría entrado en el primer if
 
-				// Si no entro en el bucle anterior
-				//		x = j, y = i
-				// Si entro en el bucle
-				//		si hayBarcoAbajo return false
-				//		si !hayBarcoAbajo no entra en este bucle
-				while (hayBarcoAbajo(y, x)) {
-					// Si no toca con otro barco
-					if (hayBarcoDer(y, x) || hayBarcoAbajoIzq(y, x) || hayBarcoAbajoDer(y, x)) return false;
+					while (hayBarcoAbajo(y, x)) {
+						//Me desplazo abajo
+						y++;
+						grid[y][x] = 0;
+						barcoLen++;
 
-					//Me desplazo abajo
-					y++;
-					grid[y][x] = 0;
-					barcoLen++;
-
-					// Y compruebo que no hay barcos en las diagonales
-					if (hayBarcoAbajoIzq(y, x) || hayBarcoAbajoDer(y, x)) return false;
+						// Y compruebo que no hay barcos en las diagonales
+						if (hayBarcoAbajoIzq(y, x) || hayBarcoAbajoDer(y, x)) return false;
+					}
 				}
 
 				//Si no era un barco
@@ -84,7 +87,7 @@ bool correcto() {
 		}
 	}
 
-	//Si queda alun barco por poner
+	//Si queda algun barco por poner
 	for (std::map<int, int>::iterator it = barcos.begin(); it != barcos.end(); it++) {
 		if (it->second > 0) return false;
 	}
@@ -92,14 +95,10 @@ bool correcto() {
 	return true;
 }
 
-std::string resolver() {
-	if (correcto()) return "SI";
-	return "NO";
-}
 
 bool resuelveCaso() {
 	barcos.clear();
-	grid.clear();
+	//grid.clear();
 
 	std::cin >> numBarcos;
 	if (!numBarcos)
@@ -115,16 +114,17 @@ bool resuelveCaso() {
 	}
 
 	std::cin >> gridLen;
-	grid = std::vector<std::vector<int>>(gridLen, std::vector<int>(gridLen));
 	for (int i = 0; i < gridLen; i++) {
 		for (int j = 0; j < gridLen; j++) {
 			std::cin >> grid[i][j];
 		}
 	}
 
-	std::string sol = resolver();
+	bool sol = resolver();
 
-	std::cout << sol << '\n';
+
+	if (sol) std::cout << "SI\n";
+	else std::cout << "NO\n";
 
 	return true;
 }
