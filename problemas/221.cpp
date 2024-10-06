@@ -1,36 +1,10 @@
 #include <iostream>
-
-using namespace std;
+#include <iomanip>
+#include <fstream>
 
 const int MAX = 10000;
 
-bool puedeAbrir(int n, int v[], int &k);
-
-int main() {
-
-	int n, k;
-	int *v = new int[MAX];
-
-	int numCasos;
-	cin >> numCasos;
-
-	for (; numCasos > 0; --numCasos) {
-		k = 0;
-		cin >> n;
-		for (int i = 0; i < n; ++i) cin >> v[i];
-
-		if (puedeAbrir(n, v, k))
-			cout << "SI " << k << endl;
-		else
-			cout << "NO" << endl;
-	}
-
-	delete[] v;
-
-	return 0;
-}
-
-bool puedeAbrir(int n, int v[], int& k) {
+bool resolver(int n, int v[], int& k) {
 	bool ret = true, zonaPar = true;
 	int i = 0;
 
@@ -45,4 +19,36 @@ bool puedeAbrir(int n, int v[], int& k) {
 	}
 
 	return ret;
+}
+
+int resuelveCaso() {
+
+	int n, k;
+	int *v = new int[MAX];
+
+	k = 0;
+	std::cin >> n;
+	for (int i = 0; i < n; ++i) 
+		std::cin >> v[i];
+
+	bool sol = resolver(n, v, k);
+
+	if (sol)
+		std::cout << "SI " << k << '\n';
+	else
+		std::cout << "NO" << '\n';
+
+	delete[] v;
+
+	return 0;
+}
+
+int main() {
+
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
+
+    return 0;
 }

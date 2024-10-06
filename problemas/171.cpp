@@ -1,32 +1,13 @@
-#include<iostream>
-using namespace std;
+#include <iostream>
+#include <iomanip>
+#include <fstream>
 
 const int MAX = 100000;
 
-int numAbadias(int n, int v[]);
+int resolver(int n, int v[]) {
 
-int main() {
-	int n;
-	int* v = new int[MAX];
-	cin >> n;
-
-	while (n != 0) {
-		for(int i = 0; i < n; ++i) { cin >> v[i]; }
-		cout << numAbadias(n, v) << endl;
-		cin >> n;
-	}
-
-	delete[] v;
-	return 0;
-}
-
-// pre { 0 < n <= 100.000 }
-int numAbadias(int n, int v[]) {
-	//Invariante
-	//
 	int ret = 0, max = 0;
 
-	// O(n)
 	while (n > 0) {
 		--n;
 		if (v[n] > max) {
@@ -37,4 +18,31 @@ int numAbadias(int n, int v[]) {
 
 	return ret;
 }
-//pos { #i: 0 <= i < n: v[i] > (max j: i < j < n: v[j] ) }
+
+bool resuelveCaso() {
+    // leer los datos de la entrada
+    int n;
+	int* v = new int[MAX];
+	std::cin >> n;
+
+    if (!n)
+        return false;
+
+	for(int i = 0; i < n; ++i) 
+		std::cin >> v[i];
+
+	int sol = resolver(n, v);
+
+    // escribir sol
+    std::cout << sol << '\n';
+
+	delete[] v;
+    return true;
+}
+
+int main() {
+
+    while (resuelveCaso());
+
+    return 0;
+}

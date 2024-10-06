@@ -1,19 +1,10 @@
 #include <iostream>
+#include <iomanip>
+#include <fstream>
+
 #include <math.h>
 
-using namespace std;
-
-int seriePotencias(int x, int n);
-
-int main() {
-	int x, n;
-
-	while (cin >> x >> n) {
-		cout << seriePotencias(x, n) << endl;
-	}
-}
-
-int seriePotencias(int x, int n) {
+int resolver(int x, int n) {
 	int ret = 1, a = 1;
 	int i = 0;
 
@@ -24,4 +15,23 @@ int seriePotencias(int x, int n) {
 	}
 
 	return ret;
+}
+
+int resuelveCaso() {
+	int x, n;
+
+	std::cin >> x >> n;
+	if (!std::cin)
+        return false;
+
+	int sol = resolver(x, n);
+
+	std::cout << sol << '\n';
+}
+
+int main() {
+
+    while (resuelveCaso());
+
+    return 0;
 }
