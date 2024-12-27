@@ -1,24 +1,38 @@
 #include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
 
-using namespace std;
+bool resolver(std::string n) {
+    int l = n.length();
+    int i = (n[0] - '0')%l;
+    int cnt = 1;
 
-bool saltarines(int n);
+    while (i != 0 && cnt <= l) {
+        i = ((n[i] - '0') + i) % l;
+        cnt++;
+    }
 
-int main() {
-	int numCasos = 0, n = 0;
-	cin >> numCasos;
-
-	for (int i = 0; i < numCasos; ++i) {
-		cin >> n;
-		if (saltarines(n)) { cout << "SALTARINES" << endl;  }
-		else { cout << "NORMALES" << endl; }
-	}
-
-	return 0;
+    return i == 0 && cnt == l;
 }
 
-bool saltarines(int n) {
-	bool ret = false;
+void resuelveCaso() {
+    // leer los datos de la entrada
+	std::string n;
+	std::cin >> n;
 
-	return ret;
+    bool sol = resolver(n);
+   
+    if (sol) std::cout << "SALTARINES\n";
+    else std::cout << "NORMALES\n";
+}
+
+int main() {
+
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
+
+    return 0;
 }

@@ -1,7 +1,24 @@
 #include<iostream>
 using namespace std;
 
-bool adivinaElNumero (int ini, int fin, int n, int k);
+bool adivinaElNumero(int ini, int fin, int n, int k) {
+	
+	//Caso base
+	if (k < 0)
+		return fin - ini == 1;
+
+	//Caso recursivo
+	int v;
+	cin >> v;
+
+	if (ini < v && v <= n)
+		return adivinaElNumero(v, fin, n, k - 1);
+	else if (n < v && v < fin)
+		return adivinaElNumero(ini, v, n, k - 1);
+	else
+		return adivinaElNumero(ini, fin, n, k - 1);
+}
+
 
 int main() {
 	int ini, fin, n, k;
@@ -19,22 +36,4 @@ int main() {
 	}
 
 	return 0;
-}
-
-bool adivinaElNumero(int ini, int fin, int n, int k) {
-	
-	//Caso base
-	if (k < 0)
-		return fin - ini == 1;
-
-	//Caso recursivo
-	int v;
-	cin >> v;
-
-	if (ini < v && v <= n)
-		return adivinaElNumero(v, fin, n, k - 1);
-	else if (n < v && v < fin)
-		return adivinaElNumero(ini, v, n, k - 1);
-	else
-		return adivinaElNumero(ini, fin, n, k - 1);
 }

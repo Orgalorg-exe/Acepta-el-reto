@@ -1,27 +1,8 @@
 #include <iostream>
-using namespace std;
 
 const int MAX = 100000;
 
-int maxVentana(int v[], int n, int k);
-
-int main() {
-	int n, k;
-	int* v = new int[MAX];
-
-	cin >> n >> k;
-	while (n != 0) {
-		for (int i = 0; i < n; ++i) { cin >> v[i]; }
-		cout << maxVentana(v, n, k) << endl;
-		cin >> n >> k;
-	}
-
-	delete[] v;
-	return 0;
-}
-
-
-int maxVentana(int v[], int n, int k) {
+int resolver(int v[], int n, int k) {
 	int ret = 0;
 	int a = 0, b = 0;
 	int ultUno = 0;
@@ -49,11 +30,36 @@ int maxVentana(int v[], int n, int k) {
 			a = ++b;
 			while (a < n && v[a] == 0) { ++a; }
 			ultUno = b = a;
-			
+
 		}
 
-		ret = max(ret, ultUno - a);
+		ret = std::max(ret, ultUno - a);
 	}
 
 	return ret;
+}
+
+bool resuelveCaso() {
+	int n, k;
+	int* v = new int[MAX];
+
+	std::cin >> n >> k;
+
+	if (!n)
+		return false;
+
+	for (int i = 0; i < n; ++i) std::cin >> v[i];
+
+	int sol = resolver(v, n, k);
+	std::cout << sol << '\n';
+
+	delete[] v;
+	return true;
+}
+
+int main() {
+
+	while (resuelveCaso());
+
+	return 0;
 }

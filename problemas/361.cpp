@@ -1,30 +1,10 @@
 #include <iostream>
-using namespace std;
+#include <iomanip>
+#include <fstream>
 
 const int MAX = 5;
 
-bool exCombOp(int result, int nums[], int solParcial, int k);
-
-int main() {
-	int result;
-	int nums[MAX]{};
-
-	cin >> result;
-	while (cin) {
-		for (int i = 0; i < MAX; ++i) cin >> nums[i];
-
-		if (exCombOp(result, nums, nums[0], 1))
-			cout << "SI" << endl;
-		else
-			cout << "NO" << endl;
-
-		cin >> result;
-	}
-
-	return 0;
-}
-
-bool exCombOp(
+bool resolver(
 	//Datos del problema
 	int result,
 	int nums[],
@@ -45,20 +25,20 @@ bool exCombOp(
 	while (i < 4 && !exComb) {
 		switch (i) {
 		case 0:
-			exComb |= exCombOp(result, nums, solParcial + nums[k], k + 1);
+			exComb |= resolver(result, nums, solParcial + nums[k], k + 1);
 			break;
 
 		case 1:
-			exComb |= exCombOp(result, nums, solParcial - nums[k], k + 1);
+			exComb |= resolver(result, nums, solParcial - nums[k], k + 1);
 			break;
 
 		case 2:
-			exComb |= exCombOp(result, nums, solParcial * nums[k], k + 1);
+			exComb |= resolver(result, nums, solParcial * nums[k], k + 1);
 			break;
 
 		case 3:
-			if (solParcial != 0 && solParcial % nums[k] == 0)
-				exComb |= exCombOp(result, nums, solParcial / nums[k], k + 1);
+			if (nums[k] != 0 && solParcial % nums[k] == 0)
+				exComb |= resolver(result, nums, solParcial / nums[k], k + 1);
 			break;
 
 		default:
@@ -69,4 +49,30 @@ bool exCombOp(
 	}
 
 	return exComb;
+}
+
+bool resuelveCaso() {
+	int result;
+	int nums[MAX]{};
+
+	std::cin >> result;
+
+	if (!std::cin)
+		return false;
+
+	for (int i = 0; i < MAX; ++i) std::cin >> nums[i];
+
+	bool sol = resolver(result, nums, nums[0], 1);
+
+	if (sol) std::cout << "SI\n";
+	else std::cout << "NO\n";
+
+	return true;
+}
+
+int main() {
+
+	while (resuelveCaso());
+
+	return 0;
 }

@@ -1,42 +1,8 @@
 #include <iostream>
 
-using namespace std;
-
 const int MAX = 300000;
 
-
-int minUvas(int v[], int n, int k, int sumTotal);
-
-int main() {
-	int* v = new int[MAX];
-	int n, k, sum;
-	cin >> n >> k;
-
-	while (n != 0) {
-
-		sum = 0;
-		for (int i = 0; i < n; ++i) {
-			cin >> v[i];
-			sum += v[i];
-		}
-
-		if (sum < k) {
-			cout << "IMPOSIBLE\n";
-		}
-		else {
-			cout << minUvas(v, n, k, sum) << endl;
-		}
-
-		cin >> n >> k;
-	}
-
-	delete[] v;
-
-	return 0;
-}
-
-//Ventana deslizante
-int minUvas(int v[], int n, int k, int sumTotal) {
+int resolver(int v[], int n, int k, int sumTotal) {
 
 	int ret = sumTotal;
 	int a = 0, b = 0;
@@ -57,4 +23,32 @@ int minUvas(int v[], int n, int k, int sumTotal) {
 	}
 
 	return ret;
+}
+
+bool resuelveCaso() {
+	int* v = new int[MAX];
+	int n, k, sum;
+	std::cin >> n >> k;
+
+	if (!n) return false;
+
+	sum = 0;
+	for (int i = 0; i < n; ++i) {
+		std::cin >> v[i];
+		sum += v[i];
+	}
+
+	if (sum < k) std::cout << "IMPOSIBLE\n";
+	else std::cout << resolver(v, n, k, sum) << '\n';
+
+	delete[] v;
+	return true;
+}
+
+
+int main() {
+
+	while (resuelveCaso());
+
+	return 0;
 }

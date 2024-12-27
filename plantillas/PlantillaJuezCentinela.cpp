@@ -21,9 +21,10 @@ bool resuelveCaso() {
     return true;
 }
 
+
 int main() {
 
-    while (resuelveCaso());
+	while (resuelveCaso());
 
-    return 0;
+	return 0;
 }
